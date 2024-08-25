@@ -8,6 +8,12 @@ mongoose.connect('mongodb://0.0.0.0:27017/voting-system')
 .catch(err=>console.log("err",err))
 
 const voterschema=new mongoose.Schema({
+    voterId:{
+        type:String,
+        unique:true,
+        required:true
+
+    },
     name:{
         type:String
     },

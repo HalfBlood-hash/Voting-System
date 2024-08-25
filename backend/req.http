@@ -1,3 +1,14 @@
 
 ###
 get http://localhost:4003/voter/getvoter
+
+###
+post http://localhost:4003/voter/createvoter
+Content-Type: application/json
+
+{
+    "name":"Satyam",
+    "fatherName":"Satish Chandra Srivastava",
+    "motherName":"Nitu Srivastava",
+    "age":18
+}

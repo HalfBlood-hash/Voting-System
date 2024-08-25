@@ -6,10 +6,10 @@ const voterApp=exp.Router()
 
 
 const  expressErrorHandler=require('express-async-handler')
-const getAllVoter=require('../controllers/voterController')
+const {getAllVoter,createVoterList}=require('../controllers/voterController')
 
 voterApp.get('/getvoter',expressErrorHandler(getAllVoter))
-
+voterApp.post('/createvoter',expressErrorHandler(createVoterList))
 
 
 module.exports=voterApp
